@@ -23,7 +23,7 @@ struct CustomText: View {
 
 struct ContentView: View {
     var body: some View {
-        ScrollView(.vertical) {
+        ScrollView(.vertical) { // List will create them lazily, only when them needed
             VStack(spacing: 10) {
                 ForEach(0..<100) {
                     CustomText("Item \($0)")
